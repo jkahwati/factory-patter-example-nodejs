@@ -1,11 +1,13 @@
-const employeeFactory = require('./EmployeeFactory')
+const EmployeeFactory = require('./Employees/factories/EmployeeFactory')
+const Employee = require('./Employees/entitites/Employee');
 
+var employeeFactory = new EmployeeFactory(); //concreteFactory or keyClassFactory
+var employee = new Employee(); // Product
 
-const engineer = employeeFactory.create("Jesus","5000","Engineer")
-const director = employeeFactory.create("Eduardo","10000","Director")
+employee = employeeFactory.getEmployee("Jesus","25000","Engineer")
+console.log(employee);
+employee.greeting()
 
-console.log(engineer);
-console.log(director);
-engineer.greeting()
-engineer.test()
-director.greeting()
+employee = employeeFactory.getEmployee("Eduardo","100000","Director")
+console.log(employee);
+employee.greeting()

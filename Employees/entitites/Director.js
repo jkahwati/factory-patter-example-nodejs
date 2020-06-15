@@ -7,7 +7,7 @@ module.exports = class Director extends Employee {
     }
 
     greeting() {
-        console.log(`My name is ${this.name}, I am an Director and my salary is ${this.salary}`);
+        console.log(`My name is ${this.name}, I am an Director and my salary is ${this.salary}$`);
     }
 
 }
